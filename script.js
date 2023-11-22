@@ -22,6 +22,7 @@ function transformaQR() {
         }
         else if (!textoParaQR.includes(validacaoHTTP) || !textoParaQR.includes(validacaoHTTPS)) {
             document.querySelector('div').appendChild(avisoqr)
+            document.querySelector('img').setAttribute('src', '')
         }
     }
     else if (textoParaQR != '' && !telaDesktop.matches) {
@@ -31,11 +32,13 @@ function transformaQR() {
         }
         else if (!textoParaQR.includes(validacaoHTTP) || !textoParaQR.includes(validacaoHTTPS)) {
             document.querySelector('div').appendChild(avisoqr)
+            document.querySelector('img').setAttribute('src', '')
 
         }
     }
     if (textoParaQR == '') {
         document.querySelector('div').appendChild(avisoqr)
+        document.querySelector('img').setAttribute('src', '')
     }
 
 }
